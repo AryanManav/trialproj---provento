@@ -1,0 +1,12 @@
+﻿node_modules
+dist
+.env
+.env.local
+*.log
+coverage
+.vscode
+.idea
+*.sqlite
+*.db-journal
+server/prisma/*.db
+server/prisma/*.db-journal
