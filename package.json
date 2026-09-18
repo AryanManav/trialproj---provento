@@ -1,0 +1,18 @@
+{
+  "name": "code-master",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Browser-based coding workspace with Monaco Editor, project/file management, and sandboxed code execution",
+  "scripts": {
+    "setup": "npm --prefix server install && npm --prefix server run prisma:generate && npm --prefix server run prisma:push && npm --prefix server run seed && npm --prefix client install",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "npm --prefix client run build",
+    "test": "npm --prefix server test",
+    "seed": "npm --prefix server run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
